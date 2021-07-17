@@ -41,11 +41,13 @@ class MyApp extends StatelessWidget {
     if (isLogin!) {
       return MaterialApp(
         title: 'Bolalucu League',
+        debugShowCheckedModeBanner: false,
         home: HomePage(),
       );
     } else {
       return MaterialApp(
         title: 'Bolalucu League',
+        debugShowCheckedModeBanner: false,
         home: LoginPage(),
       );
     }

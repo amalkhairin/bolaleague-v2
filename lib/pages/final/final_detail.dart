@@ -340,24 +340,24 @@ class _FinalDetailPageState extends State<FinalDetailPage> {
                           : Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Column(
-                                children: [
-                                  CircleAvatar(backgroundColor: Colors.blue, child: Text("${_listMatch[index].homeTeamName!.substring(0,1)}"),),
-                                  Container(
-                                      width: 80,
-                                      child: Center(child: Text("${_listMatch[index].homeTeamName}", overflow: TextOverflow.ellipsis,))
-                                    ),
-                                ],
+                              Container(
+                                width: 100,
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(backgroundColor: Colors.blue, child: Text("${_listMatch[index].homeTeamName!.substring(0,1)}"),),
+                                    Text("${_listMatch[index].homeTeamName}", textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis,),
+                                  ],
+                                ),
                               ),
                               Text("${_listMatch[index].homeScore} - ${_listMatch[index].awayScore}", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
-                              Column(
-                                children: [
-                                  CircleAvatar(backgroundColor: Colors.orange, child: Text("${_listMatch[index].awayTeamName!.substring(0,1)}"),),
-                                  Container(
-                                      width: 80,
-                                      child: Center(child: Text("${_listMatch[index].awayTeamName}", overflow: TextOverflow.ellipsis,))
-                                    ),
-                                ],
+                              Container(
+                                width: 100,
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(backgroundColor: Colors.orange, child: Text("${_listMatch[index].awayTeamName!.substring(0,1)}"),),
+                                    Text("${_listMatch[index].awayTeamName}", textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis,),
+                                  ],
+                                ),
                               ),
                             ],
                           )

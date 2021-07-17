@@ -296,6 +296,8 @@ class _GroupStageState extends State<GroupStage> {
                                                     width: screenSize.width/3.2,
                                                     child: TextFormField(
                                                       controller: _listHomeScoreController[matchIndex],
+                                                      textInputAction: TextInputAction.next,
+                                                      keyboardType: TextInputType.number,
                                                       decoration: InputDecoration(
                                                         filled: true,
                                                         hintText: "Skor",
@@ -313,6 +315,7 @@ class _GroupStageState extends State<GroupStage> {
                                                     width: screenSize.width/3.2,
                                                     child: TextFormField(
                                                       controller: _listAwayScoreController[matchIndex],
+                                                      keyboardType: TextInputType.number,
                                                       decoration: InputDecoration(
                                                         filled: true,
                                                         hintText: "Skor",

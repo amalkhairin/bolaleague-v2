@@ -181,6 +181,8 @@ class _SemifinalLegDetailPageState extends State<SemifinalLegDetailPage> {
                                         width: screenSize.width/3.2,
                                         child: TextFormField(
                                           controller: _homeScoreController,
+                                          textInputAction: TextInputAction.next,
+                                          keyboardType: TextInputType.number,
                                           decoration: InputDecoration(
                                             filled: true,
                                             hintText: "Skor",
@@ -198,6 +200,7 @@ class _SemifinalLegDetailPageState extends State<SemifinalLegDetailPage> {
                                         width: screenSize.width/3.2,
                                         child: TextFormField(
                                           controller: _awayScoreController,
+                                          keyboardType: TextInputType.number,
                                           decoration: InputDecoration(
                                             filled: true,
                                             hintText: "Skor",

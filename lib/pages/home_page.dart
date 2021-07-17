@@ -3,8 +3,13 @@ import 'package:bolalucuv2/component/dialog/b_dialog.dart';
 import 'package:bolalucuv2/config/app_helper.dart';
 import 'package:bolalucuv2/constant/colors.dart';
 import 'package:bolalucuv2/model/user_model.dart';
+import 'package:bolalucuv2/pages/final/final_detail.dart';
+import 'package:bolalucuv2/pages/group_stage/group_list.dart';
 import 'package:bolalucuv2/pages/list_of_team/list_of_teams_page.dart';
 import 'package:bolalucuv2/pages/login_page.dart';
+import 'package:bolalucuv2/pages/quarter_final/quarter_list_page.dart';
+import 'package:bolalucuv2/pages/round_stage/round_list_page.dart';
+import 'package:bolalucuv2/pages/semifinal/semifinal_list_page.dart';
 // import 'package:bolalucuv2/pages/final/final_detail.dart';
 // import 'package:bolalucuv2/pages/group_stage/group_list.dart';
 // import 'package:bolalucuv2/pages/quarter_final/quarter_list_page.dart';
@@ -136,9 +141,9 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 36,),
                   InkWell(
                     onTap: (){
-                      // Navigator.of(context).push(
-                      //   MaterialPageRoute(builder: (context) => GroupList())
-                      // );
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => GroupList())
+                      );
                     },
                     child: Ink(
                       width: screenSize.width,
@@ -172,9 +177,9 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       InkWell(
                         onTap: (){
-                          // Navigator.of(context).push(
-                          //   MaterialPageRoute(builder: (context) => RoundListPage())
-                          // );
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => RoundListPage())
+                          );
                         },
                         child: Ink(
                           width: screenSize.width/2.4,
@@ -204,9 +209,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       InkWell(
                         onTap: (){
-                          // Navigator.of(context).push(
-                          //   MaterialPageRoute(builder: (context) => QuarterListPage())
-                          // );
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => QuarterListPage())
+                          );
                         },
                         child: Ink(
                           width: screenSize.width/2.4,
@@ -242,9 +247,9 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       InkWell(
                         onTap: (){
-                          // Navigator.of(context).push(
-                          //   MaterialPageRoute(builder: (context) => SemifinalListPage())
-                          // );
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => SemifinalListPage())
+                          );
                         },
                         child: Ink(
                           width: screenSize.width/2.4,
@@ -274,9 +279,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       InkWell(
                         onTap: (){
-                          // Navigator.of(context).push(
-                          //   MaterialPageRoute(builder: (context) => FinalDetailPage())
-                          // );
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => FinalDetailPage())
+                          );
                         },
                         child: Ink(
                           width: screenSize.width/2.4,

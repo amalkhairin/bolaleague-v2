@@ -1,11 +1,11 @@
 {
-    "name": "bolalucuv2",
-    "short_name": "bolalucuv2",
+    "name": "bolalucu League",
+    "short_name": "bolalucu League",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Bolalucu League App",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

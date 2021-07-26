@@ -20,6 +20,7 @@ class BDialog extends StatelessWidget {
       elevation: 0.0,
       backgroundColor: Colors.transparent,
       child: Container(
+        constraints: BoxConstraints(maxWidth: 700),
         decoration: BoxDecoration(
           color: Colors.white,
           shape: BoxShape.rectangle,

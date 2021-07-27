@@ -106,6 +106,7 @@ class _ListOfTeamsPageState extends State<ListOfTeamsPage> {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Container(
+                    constraints: BoxConstraints(maxWidth: 700),
                     width: screenSize.width,
                     child: Padding(
                       padding: EdgeInsets.all(8.0),

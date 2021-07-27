@@ -1,6 +1,7 @@
 import 'package:bolalucuv2/component/button/b_button.dart';
 import 'package:bolalucuv2/component/dialog/b_dialog.dart';
 import 'package:bolalucuv2/config/app_helper.dart';
+import 'package:bolalucuv2/config/user_helper.dart';
 import 'package:bolalucuv2/constant/colors.dart';
 import 'package:bolalucuv2/model/user_model.dart';
 import 'package:bolalucuv2/pages/final/final_detail.dart';
@@ -48,12 +49,58 @@ class _HomePageState extends State<HomePage> {
       }
     }
   }
+  
+  auth() async {
+    var data = await UserHelper.getTeamById(ownerId: user!.ownerId.toString());
+    if(data['success']){
+      if(data['data'][0]['status'] == 0){
+        showDialog(
+          barrierDismissible: false,
+          context: context,
+          builder: (context) => BDialog(
+            title: "AUTH FAILED!",
+            description: "Akun tidak terverifikasi.\nSilahkan hubungi admin untuk melakukan verifikasi akun",
+            dialogType: BDialogType.FAILED,
+            action: [
+              BButton(
+                onPressed: (){
+                  Navigator.of(context).pop();
+                  Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=> LoginPage()), (route) => false);
+                },
+                label: Text("Ok"),
+              ),
+            ],
+          )
+        );
+      }
+    } else {
+      showDialog(
+        barrierDismissible: false,
+        context: context,
+        builder: (context) => BDialog(
+          title: "AUTH FAILED!",
+          description: "Akun tidak ditemukan",
+          dialogType: BDialogType.FAILED,
+          action: [
+            BButton(
+              onPressed: (){
+                Navigator.of(context).pop();
+                Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=> LoginPage()), (route) => false);
+              },
+              label: Text("Ok"),
+            ),
+          ],
+        )
+      );
+    }
+  }
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     getMessage();
+    auth();
   }
 
   @override

@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
   String message = "Loading...";
 
   Future<void> getMessage() async {
+    await auth();
     var data = await AppHelper.getMessage();
     if(data['success']){
       if(mounted){
@@ -100,7 +101,6 @@ class _HomePageState extends State<HomePage> {
     // TODO: implement initState
     super.initState();
     getMessage();
-    auth();
   }
 
   @override
